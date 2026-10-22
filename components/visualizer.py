@@ -1,4 +1,12 @@
 from __future__ import annotations
+import sys
+from pathlib import Path
+
+# Anchor repo root in sys.path
+ROOT_DIR = Path(__file__).resolve().parent.parent
+if str(ROOT_DIR) not in sys.path:
+    sys.path.insert(0, str(ROOT_DIR))
+
 import html
 from typing import List
 import plotly.graph_objects as go
