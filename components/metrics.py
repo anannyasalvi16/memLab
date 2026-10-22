@@ -101,3 +101,9 @@ def apply_custom_styles():
         }
         </style>
     """, unsafe_allow_html=True)
+
+
+if __name__ == "__main__":
+    import runpy
+    app_file = ROOT_DIR / "app.py"
+    runpy.run_path(str(app_file), run_name="__main__")
